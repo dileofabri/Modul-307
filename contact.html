@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Form Validator -->
+        <script src="js/formValidator.js"></script>
+
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <title>Kontakt - Modul 307</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="top-nav">
+            <!-- Logo -->
+            <a class="logo" href="index.html">Modul 307 - LB02</a>
+            <!-- Primary menu -->
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">Über Mich</a>
+                <a class="span" href="contact.html">Kontakt</a>
+            </div>
+        </nav>
+        <!-- Header with Claim -->
+        <section class="header">
+            <div class="claim">
+                <h2>Kontaktformular</h2>
+                <p>Haben Sie Fragen oder ein Anliegen an mich? Zögern Sie nicht, mich zu kontaktieren! Ich bin gerne für
+                Sie da.</p>
+            </div>
+        </section>
+        <!-- Main section with Contact Form -->
+        <section class="main">
+            <div class="form-container">
+                <p id="confirmationMessage"></p>
+                <form id="contactForm" action="javascript:validateForm()">
+                    <p id="warningMessage"></p>
+                    <label class="inputLabels" for="fname">Vorname <span style="color: red">*</span></label><br>
+                    <input type="text" id="fname" class="inputField" name="fname"><br>
+                    <label class="inputLabels" for="lname">Nachname <span style="color: red">*</span></label><br>
+                    <input type="text" id="lname" class="inputField" name="lname"><br>
+                    <label class="inputLabels" for="email">E-Mail-Adresse <span style="color: red">*</span></label><br>
+                    <input type="email" id="email" class="inputField" name="email"><br>
+                    <label class="inputLabels" for="subject">Betreff <span style="color: red">*</span></label><br>
+                    <input type="text" id="subject" class="inputField" name="subject"><br>
+                    <label class="inputLabels" for="message">Nachricht <span style="color: red">*</span></label><br>
+                    <input type="text" id="message" class="inputField" name="message"><br>
+                    <input type="checkbox" id="checkbox" class="inputField" name="checkbox">
+                    <label class="inputLabels" for="checkbox">Hiermit akzeptieren Sie die <a href="legal.html">Nutzungsbedingungen</a>.</label><br>
+                    <input class="button" type="submit" onclick="validateForm()">
+                </form>
+            </div>
+        </section>
+        <!-- Footer section with secondary menu -->
+        <footer>
+            <div class="footer-nav">
+                <a href="legal.html">Rechtliches</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </footer>
+    </body>
+</html>

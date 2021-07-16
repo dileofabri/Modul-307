@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!-- CSS Stylesheet for Form -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <!-- Form Validator Script -->
+        <script src="js/formValidator.js"></script>
+
+        <title>Registrierung - Modul 307</title>
+    </head>
+    <body>
+        <nav class="top-nav">
+            <a class="logo" href="index.html">Modul 307 - LB02</a>
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">Über Mich</a>
+                <a class="span" href="contact.html">Kontakt</a>
+            </div>
+        </nav>
+        <section class="header">
+            <div class="claim">
+                <h2>Registrierung</h2>
+                <p>Melden Sie sich noch heute an und erhalten Sie Zugriff auf exklusivem Content!</p>
+            </div>
+        </section>
+        <section class="main">
+            <div class="form-container">
+                <form class="max-length island" name="registerForm" action="javascript:validateRegistrationForm()" method="post" novalidate>
+                    <div class="error-message error-message-highlighted push island-1-2" role="alert" aria-live="assertive">
+                        <p class="push-0">
+                            <span class="icon-label">There are items that require your attention</span>
+                        </p>
+                    </div>
+                    <div class="push-1-2">
+                        <label for="fname">Vorname <em class="flag-optional milli normal inputLabels">(optional)</em></label><br>
+                        <input type="text" id="fname" name="fname" required aria-describedby="fname-error" class="inputFields">
+                        <p class="error-message milli island-1-4 push-0" id="fname-error">
+                            <span class="icon-label">Please provide a name</span>
+                        </p><br>
+                    </div>
+                    <div class="push-1-2">
+                        <label for="lname">Nachname</label><br>
+                        <input type="text" id="lname" name="lname" required aria-describedby="lname-error">
+                        <p class="error-message milli island-1-4 push-0" id="lname-error">
+                            <span class="icon-label">Please provide a surname</span>
+                        </p><br>
+                    </div>
+                    <div class="push-1-2">
+                        <label for="email">E-Mail-Adresse</label><br>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <p class="error-message milli island-1-4 push-0" id="email-error">
+                            <span class="icon-label">Please provide an email address</span>
+                        </p><br>
+                    </div>
+                    <div class="push-1-2 pad-t-1-2">
+                        <input type="checkbox" id="agree" required aria-describedby="agree-error">
+                        <label for="agree">Hiermit akzeptieren ich die <a href="legal.html">Nutzungsbedingungen</a>.</label><br>
+                        <p class="error-message milli island-1-4 push-0" id="agree-error">
+                            <span class="icon-label">Bitte bestätige die Nutzungsbedingungen.</span>
+                        </p>
+                    </div>
+                    <div class="pad-t-1-2">
+                        <button class="btn" type="submit" onclick="validateRegistrationForm()">Registrieren</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-nav">
+                <a href="legal.html">Rechtliches</a>
+                <a href="contact.html">Kontakt</a>
+            </div>
+        </footer>
+    </body>
+</html>
